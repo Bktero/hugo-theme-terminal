@@ -4,7 +4,7 @@
 
     <div class="post-content">
       <p>Hum... This page doesn't exist, sorry.</p>
-      <a href="{{ absURL "" }}">{{ $.Site.Params.missingBackButtonLabel | default "Back to home page" }}&nbsp;→</a>
+      <a href="{{ relURL "" }}">{{ $.Site.Params.missingBackButtonLabel | default "Back to home page" }}&nbsp;→</a>
       <!-- This <a/> is used in single.html too -->
     </div>
 

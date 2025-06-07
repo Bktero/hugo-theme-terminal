@@ -1,7 +1,8 @@
 {{ define "main" }}
+<!-- This is the layout for a single post -->
 <article class="post">
   <h1 class="post-title">
-    <a href="{{ .Permalink }}">{{ .Title | markdownify }}</a>
+    <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
   </h1>
   <div class="post-meta">
     {{- if .Date -}}
@@ -20,13 +21,15 @@
     {{- end -}}
   </div>
 
+  <!-- This is where we display the tags of the post -->
   {{ if .Params.tags }}
     <span class="post-tags">
       {{ range .Params.tags }}
-      #<a href="{{ (urlize (printf "tags/%s/" .)) | absLangURL }}">{{ . }}</a>&nbsp;
+      #<a href="{{ (urlize (printf "tags/%s/" .)) | relURL }}">{{ . }}</a>
       {{ end }}
     </span>
   {{ end }}
+
   {{ partial "cover.html" . }}
 
   {{ if (.Params.Toc | default .Site.Params.Toc) }}
@@ -54,7 +57,7 @@
     {{ partial "comments.html" . }}
   {{ end }}
 
-  <a href="{{ absURL "" }}">{{ $.Site.Params.missingBackButtonLabel | default "Back to home page" }}&nbsp;→</a>
+  <a href="{{ relURL "" }}">{{ $.Site.Params.missingBackButtonLabel | default "Back to home page" }}&nbsp;→</a>
   <!-- This <a/> is used in 404.html too -->
 </article>
 {{ end }}
