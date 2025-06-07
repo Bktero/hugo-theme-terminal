@@ -1,7 +1,7 @@
 :root {
-  --background: #1a170f;
+  --background: #111111;
   --foreground: #eceae5;
-  --accent: #eec35e;
+  --accent: #c49936;
   --font-size: 1rem;
   --line-height: 1.54em;
   --radius: 0;
@@ -32,24 +32,24 @@ body {
 }
 
 h1 {
-  font-size: calc(var(--font-size) * 1.45);
+  font-size: calc(var(--font-size) * 1.50);
   letter-spacing: 0;
 }
 
 h2 {
-  font-size: calc(var(--font-size) * 1.35);
+  font-size: calc(var(--font-size) * 1.50);
   letter-spacing: 0;
 }
 
 h3 {
-  font-size: calc(var(--font-size) * 1.15);
+  font-size: calc(var(--font-size) * 1.30);
   letter-spacing: 0;
 }
 
 h4,
 h5,
 h6 {
-  font-size: calc(var(--font-size) * 1);
+  font-size: calc(var(--font-size) * 1.1);
   letter-spacing: 0;
 }
 
@@ -193,9 +193,9 @@ input[type="checkbox"]:checked {
 img {
   display: block;
   max-width: 100%;
-  border: 8px solid var(--accent);
+  border: 2px solid var(--accent);
   border-radius: var(--radius);
-  padding: 8px;
+  padding: 6px;
   overflow: hidden;
 }
 
