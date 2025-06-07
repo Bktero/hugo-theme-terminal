@@ -53,5 +53,8 @@
   {{ if not (.Params.hideComments | default false) }}
     {{ partial "comments.html" . }}
   {{ end }}
+
+  <a href="{{ absURL "" }}">{{ $.Site.Params.missingBackButtonLabel | default "Back to home page" }}&nbsp;→</a>
+  <!-- This <a/> is used in 404.html too -->
 </article>
 {{ end }}
