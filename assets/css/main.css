@@ -67,6 +67,7 @@ figure,
 video,
 table {
   margin: 25px 0;
+  line-height: calc(var(--line-height));
 }
 
 a {
