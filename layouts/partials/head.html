@@ -27,9 +27,14 @@
   <link rel="stylesheet" href="{{ "style.css" | absURL }}">
 {{- end }}
 
-<!-- Icons -->
-<link rel="shortcut icon" href="{{ "favicon.png" | absURL }}">
-<link rel="apple-touch-icon" href="{{ "apple-touch-icon.png" | absURL }}">
+<!-- Favicon -->
+<!-- Files will be added during the packaging of 'home' -->
+<!-- Don't search for then in the 'blog' repository -->
+<link rel="apple-touch-icon" sizes="180x180" href=""{{ relURL "favicon/apple-touch-icon.png" }}>
+<link rel="icon" type="image/x-icon" href="{{ relURL "favicon/favicon-32x32.png" }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ relURL "favicon/favicon-32x32.png" }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ relURL "favicon/favicon-16x16.png" }}">
+<link rel="manifest" href="{{ relURL "favicon/site.webmanifest" }}">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary" />
