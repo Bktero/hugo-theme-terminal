@@ -198,6 +198,7 @@ img {
   border-radius: var(--radius);
   padding: 6px;
   overflow: hidden;
+  margin: auto;
 }
 
 img.left {
