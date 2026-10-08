@@ -1,16 +1,4 @@
-<footer class="footer">
-  <div class="footer__inner">
-    {{ if $.Site.Copyright }}
-      <div class="copyright copyright--user">
-        <span>{{ $.Site.Copyright | safeHTML }}</span>
-    {{ else }}
-      <div class="copyright">
-        <span>© {{ now.Year }} Powered by <a href="https://gohugo.io">Hugo</a></span>
-    {{ end }}
-      <span>:: <a href="https://github.com/panr/hugo-theme-terminal" target="_blank">Theme</a> made by <a href="https://github.com/panr" target="_blank">panr</a></span>
-      </div>
-  </div>
-</footer>
+{{/* No visible footer: the credits (Hugo, theme, fork) are on the About page of the site */}}
 
 {{ $menu := resources.Get "js/menu.js" | js.Build }}
 {{ $cp := resources.Get "js/code.js" | js.Build }}
